@@ -1,0 +1,33 @@
+{
+  "name": "o4m-fhir-viewer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.0.0",
+    "@mantine/hooks": "^8.0.0",
+    "@mantine/notifications": "^8.3.18",
+    "@mantine/spotlight": "^8.3.18",
+    "@medplum/core": "5.1.6",
+    "@medplum/fhirtypes": "5.1.6",
+    "@medplum/react": "5.1.6",
+    "@medplum/react-hooks": "5.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
+    "rfc6902": "^5.2.0",
+    "signature_pad": "^5.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0"
+  }
+}
