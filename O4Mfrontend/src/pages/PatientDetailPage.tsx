@@ -4,6 +4,7 @@ import { useResource } from '@medplum/react-hooks';
 import { Container, Tabs, Title, Loader, Center, Text, Stack } from '@mantine/core';
 import { useParams, useNavigate } from 'react-router-dom';
 import type { Patient, Resource } from '@medplum/fhirtypes';
+import { DocumentsTab } from '../components/DocumentsTab';
 
 export function PatientDetailPage(): React.JSX.Element {
   const { id } = useParams<{ id: string }>();
@@ -47,6 +48,7 @@ export function PatientDetailPage(): React.JSX.Element {
             <Tabs.Tab value="labs">Labs</Tabs.Tab>
             <Tabs.Tab value="procedures">Procedures</Tabs.Tab>
             <Tabs.Tab value="encounters">Encounters</Tabs.Tab>
+            <Tabs.Tab value="documents">Documents</Tabs.Tab>
           </Tabs.List>
 
           <Tabs.Panel value="summary" pt="md">
@@ -114,6 +116,10 @@ export function PatientDetailPage(): React.JSX.Element {
               hideToolbar
               onClick={(e) => handleClick(e.resource)}
             />
+          </Tabs.Panel>
+
+          <Tabs.Panel value="documents" pt="md">
+            <DocumentsTab patientId={id!} />
           </Tabs.Panel>
         </Tabs>
       </Stack>
